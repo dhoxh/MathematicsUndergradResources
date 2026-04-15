@@ -1,5 +1,5 @@
 
-This section walks through installing every tool used in this guide. Complete these steps before moving into any other section. The goal is to get everything installed and confirmed working so that later sections can focus entirely on how to use these tools for mathematics — not on troubleshooting installations.
+This section walks through installing every tool used in this guide. Complete these steps before moving into any other section. The goal is to get everything installed and confirmed working so that later sections can focus entirely on how to use these tools for mathematics, not on troubleshooting installations.
 
 Work through the installations in the order listed. Some tools depend on others (for example, NumPy and Matplotlib require Python), so the sequence matters.
 
@@ -45,7 +45,7 @@ Download the installer from the official site:
 
 > https://git-scm.com/download/win
 
-Run the installer. When prompted about the default editor, select your preferred text editor (VS Code is a safe choice). Leave all other options at their defaults.
+Run the installer. When prompted about the default editor, select your preferred text editor (VS Code is a safe choice, I personally use zed, or notepad is fine). Leave all other options at their defaults.
 
 After installation, open **Git Bash** (installed alongside Git) and run:
 
@@ -165,7 +165,7 @@ plt.ylabel("y")
 plt.show()
 ```
 
-A window displaying a sine curve should appear. If it does, your Python environment — including NumPy and Matplotlib — is fully operational.
+A window displaying a sine curve should appear. If it does then your environment is fully operational.
 
 ---
 
