@@ -114,9 +114,6 @@ At first, this may seem like a lot. Once you get used to it, it becomes a natura
 ---
 
 ## Goal
+My goal is to help math majors move from disorganized and manual work to a system that is structured, efficient, and scalable.
 
-The goal of this guide is simple.
-
-To help math majors move from disorganized and manual work to a system that is structured, efficient, and scalable.
-
-Once built, this workflow allows you to focus less on managing your work and more on understanding mathematics.
+This workflow provides a fundamental understanding of productivity and mathematical knowledge in the age of AI and data science
