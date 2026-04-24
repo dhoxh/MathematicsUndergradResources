@@ -2,7 +2,7 @@
 
 ## Overview
 
-This guide is built for math majors who are moving into more theoretical and proof based courses. At this level, handwritten notes and static graphs start to become inefficient. It becomes harder to organize work, revisit concepts, and visualize ideas clearly.
+This guide is built for math majors who are moving into more theoretical and proof based courses. At this level, handwritten notes and static graphs start to become inefficient and messy especially with a bunch of failed attempts at homework problems or professors skipping around. It becomes harder to organize work, revisit concepts, and visualize ideas clearly in a way that you can cross reference and reference previous notes.
 
 The purpose of this guide is to introduce a structured digital workflow that improves how math is learned, written, and applied. This includes tools for note taking, computation, graphing, and version control.
 
