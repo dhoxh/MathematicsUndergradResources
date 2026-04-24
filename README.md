@@ -16,7 +16,7 @@ This guide is for math majors who:
 - Are interested in learning how programming can support mathematics
 - Have basic familiarity with tools like GitHub, LaTeX, or a terminal
 
-This is not a beginner guide to programming. Instead, it builds on basic knowledge and shows how to connect everything into one system.
+This is not a beginner guide to programming. Instead, it builds on basic knowledge and shows how to connect everything into one system and improve productivity, not all of this has to be done, however, it is definitely worth mentioning that atleast one will be useful to your specific situation. In conjuction, recruiters love to see students proactively learning outside of school and using technical equipment that professionals use ex. GitHub, LaTeX, R, IDE's, Code Editors, Version Control, and some even use Obsidian in team specific settings.
 
 ---
 
@@ -26,7 +26,7 @@ Many math students run into the same issues:
 - Notes are scattered between notebooks, files, and random documents
 - Graphs are static and cannot be easily modified or reused
 - Computations are done by hand when they could be automated
-- There is no system for organizing or revisiting past work
+- There is no system for organizing or revisiting past work, which will be important once you get to your 4XX level classes that constantly reference past theorems and details
 
 This guide provides a solution by creating a repeatable workflow that allows you to:
 - Digitize and structure notes
