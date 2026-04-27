@@ -5,7 +5,7 @@ NumPy is a Python library for numerical computation. It gives you a fast, effici
 
 For math majors, NumPy fills the role of a programmable calculator that actually handles the scale of problems you will encounter. NumPy handles all of that without the friction you would run into trying to do it by hand or even with basic Python lists.
 
-This guide covers arrays, indexing, arithmetic, broadcasting, linear algebra, and random number generation. By the end you will have enough to use NumPy practically for coursework in linear algebra, analysis, and applied math.
+This guide covers arrays, indexing, arithmetic, broadcasting, linear algebra, and random number generation. By the end you will have enough to use NumPy practically for coursework in linear algebra, analysis, and applied math. I have often used numpy in conjunction with matplotlib to write math papers and show examples on other GitHub projects, as well as, for some homework assignments in my upper level Statistics courses.
 
 ---
 
