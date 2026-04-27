@@ -127,7 +127,7 @@ conda install numpy
 
 ## 4. Matplotlib
 
-**What it is:** Matplotlib is the Python library for creating graphs and visualizations. Like NumPy, it is included with Anaconda.
+**What it is:** Matplotlib is the Python library for creating graphs and visualizations. Like NumPy, it is included with Anaconda. This will be used in conjunction with numpy thus the tutorials and showcases will be combined within the folder under Numpy.
 
 **Verify the installation:**
 
