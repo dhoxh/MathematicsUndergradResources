@@ -104,7 +104,7 @@ The guide is structured as a workflow, not isolated tools.
 ## Tips for Using This Guide
 
 - Do not try to learn everything at once  
-- Focus on building a simple workflow first  
+- Focus on building a simple workflow that works for you at first, then add things on as need be
 - Practice by applying tools to your current classes  
 - Revisit sections as your courses become more advanced  
 - Keep your system consistent  
