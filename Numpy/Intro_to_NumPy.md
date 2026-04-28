@@ -1,6 +1,8 @@
 ---
-title: Numpy
+title: NumPy
 nav_order: 4
+has_children: true
+permalink: /numpy
 ---
 ## What Is NumPy?
 
