@@ -1,3 +1,7 @@
+---
+title: Home
+nav_order: 1
+---
 # Math Digital Workflow
 
 ## Overview
