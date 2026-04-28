@@ -1,3 +1,7 @@
+---
+title: LaTeX & Overleaf
+nav_order: 2
+---
 ## What Is Git?
 
 Git is a version control system. It tracks changes to files over time, letting you save snapshots of your work, review your history, revert to earlier versions, and collaborate with others without overwriting each other's contributions.
