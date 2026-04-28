@@ -1,6 +1,6 @@
 ---
-title: Git
-nav_order: 1
+title: Git & GitHub
+nav_order: 3
 ---
 ## What Is Git?
 
