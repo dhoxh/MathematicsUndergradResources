@@ -1,6 +1,6 @@
 ---
 title: Git Examples
-parent: Intro to Git
+parent: Git & GitHub
 nav_order: 1
 ---
 
