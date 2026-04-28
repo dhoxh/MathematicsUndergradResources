@@ -1,3 +1,7 @@
+---
+title: R
+nav_order: 4
+---
 # Introduction to R
 
 ## What Is R?
