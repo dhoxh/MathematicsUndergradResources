@@ -1,3 +1,7 @@
+---
+title: Resources & Works Cited
+nav_order: 7
+---
 # Works Cited
 
 Anaconda. *Anaconda Distribution Download*. https://www.anaconda.com/download
