@@ -1,3 +1,4 @@
+```python
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -228,3 +229,4 @@ for ax, shape, title in zip(axes, shapes, titles):
 
 plt.tight_layout()
 plt.show()
+```
