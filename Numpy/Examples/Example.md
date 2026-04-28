@@ -235,3 +235,18 @@ for ax, shape, title in zip(axes, shapes, titles):
 plt.tight_layout()
 plt.show()
 ```
+![NumPy Example 1](numpy1.png)
+
+![NumPy Example 2](numpy2.png)
+
+![NumPy Example 3](numpy3.png)
+
+![NumPy Example 4](numpy4.png)
+
+![NumPy Example 5](numpy5.png)
+
+![NumPy Example 6](numpy6.png)
+
+![NumPy Example 7](numpy7.png)
+
+![NumPy Example 8](numpy8.png)
