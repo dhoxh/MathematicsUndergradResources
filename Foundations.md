@@ -1,4 +1,7 @@
-
+---
+title: Foundations
+nav_order: 2
+---
 This section walks through installing every tool used in this guide. Complete these steps before moving into any other section. The goal is to get everything installed and confirmed working so that later sections can focus entirely on how to use these tools for mathematics, not on troubleshooting installations.
 
 Work through the installations in the order listed. Some tools depend on others (for example, NumPy and Matplotlib require Python), so the sequence matters.
