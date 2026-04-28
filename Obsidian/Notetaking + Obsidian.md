@@ -1,3 +1,7 @@
+---
+title: Obsidian
+nav_order: 2
+---
 ## What Is Obsidian?
 
 Obsidian is a note-taking application that stores all of your notes as plain Markdown files on your own computer. There is no proprietary format, no required account, and no dependency on a cloud service. Your notes are just text files in a folder, which means they are readable by any text editor, portable across any machine, and easy to back up with Git.
