@@ -1,5 +1,5 @@
 ---
-title: LaTeX & Overleaf
+title: Git
 nav_order: 1
 ---
 ## What Is Git?
