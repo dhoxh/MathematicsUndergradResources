@@ -1,1 +1,3 @@
-theme: jekyll-theme-minimal
+remote_theme: just-the-docs/just-the-docs
+title: Math Digital Workflow
+description: A practical guide for math majors to build an efficient digital workflow.
