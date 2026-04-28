@@ -1,6 +1,8 @@
 ---
 title: Git & GitHub
 nav_order: 3
+has_children: true
+permalink: /git
 ---
 ## What Is Git?
 
