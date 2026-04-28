@@ -1,3 +1,8 @@
+---
+title: NumPy Examples
+parent: NumPy
+nav_order: 1
+---
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
