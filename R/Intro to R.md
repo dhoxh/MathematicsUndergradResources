@@ -4,7 +4,7 @@
 
 R is a programming language and environment designed for statistical computing and data analysis. It was built by statisticians, for statisticians, which means its core syntax and built-in functions reflect the way mathematicians and scientists actually think about data, probability, and computation. R is a progressive approach towards statistics and has statistics in mind foundationally.
 
-For math majors, R fills a specific role in your workflow. It is the most natural tool for probability and statistics coursework, for verifying hand calculations, for running simulations, and for producing publication-quality statistical graphics. It also functions as a powerful calculator for algebraic and numerical work, handling matrices, systems of equations, and numerical integration in ways that are more concise than equivalent Python code for mathematically structured problems.
+For math majors, R fills a specific role in your workflow. It is the most natural tool for probability and statistics coursework, for verifying hand calculations, for running simulations, and for producing publication-quality statistical graphics which I have personally used in other GitHub projects and websites. It also functions as a powerful calculator for algebraic and numerical work, handling matrices, systems of equations, and numerical integration in ways that are more concise than equivalent Python code for mathematically structured problems.
 
 This guide covers installation, basic usage as a calculator, core data structures, statistical computing, probability and distributions, matrix operations, plotting, and practical workflows for math coursework.
 
