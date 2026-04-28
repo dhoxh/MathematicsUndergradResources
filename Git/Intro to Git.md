@@ -2,7 +2,7 @@
 
 Git is a version control system. It tracks changes to files over time, letting you save snapshots of your work, review your history, revert to earlier versions, and collaborate with others without overwriting each other's contributions.
 
-For math majors, Git solves a problem that shows up constantly in upper-level coursework: you revise a proof, realize the earlier version was closer to correct, and have no way to get it back. Or you work on a problem set across multiple machines and end up with conflicting copies. Git eliminates both problems. Every change is recorded, every version is recoverable, and your work is stored in one authoritative place.
+For math majors, Git solves a problem that shows up constantly in upper-level coursework: you revise a proof, realize the earlier version was closer to correct, and have no way to get it back. Or you work on a problem set across multiple machines and end up with conflicting copies and hundreds of different config files and you wonder why everything is jumbled up. Git eliminates both problems. Every change is recorded, every version is recoverable and restorable, and your work is stored in one neat place.
 
 This guide focuses on using Git from the command line. The command line gives you full control and is what you will encounter in any professional or research context. Once you understand the fundamentals here, graphical Git tools will make immediate sense.
 
