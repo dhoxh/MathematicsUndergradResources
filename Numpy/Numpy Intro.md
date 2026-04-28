@@ -1,4 +1,7 @@
-
+---
+title: Numpy
+nav_order: 2
+---
 ## What Is NumPy?
 
 NumPy is a Python library for numerical computation. It gives you a fast, efficient array type and a large collection of mathematical functions that operate on those arrays. It is the foundation that almost every other scientific Python library sits on top of, including Matplotlib, SciPy, and pandas.
