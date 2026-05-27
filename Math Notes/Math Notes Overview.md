@@ -11,13 +11,13 @@ Course-by-course notes, proofs, and key results from the Penn State undergraduat
 
 ---
 
-### [Discrete Mathematics](./Notes/Discrete)
+### Discrete Mathematics
 Logic, set theory, proofs, combinatorics, and graph theory.
 
-### [Differential Equations](./Notes/DifEq)
+### Differential Equations
 First-order ODEs, linear systems, Laplace transforms, and numerical methods.
 
-### [Numerical Analysis](./Notes/NumericalAnalysis)
+### Numerical Analysis
 Floating point arithmetic, root-finding, interpolation, quadrature, and IVP solvers.
 
 ### Systems Programming
