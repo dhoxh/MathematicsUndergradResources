@@ -2,6 +2,7 @@
 title: Differential Equations
 parent: Math Notes
 nav_order: 2
+has_toc: true
 ---
 
 # Differential Equations Notes
