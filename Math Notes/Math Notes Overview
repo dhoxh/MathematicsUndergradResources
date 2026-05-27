@@ -1,0 +1,50 @@
+title	Math Notes
+nav_order	7
+has_children	true
+permalink	/mathnotes
+
+## Math Notes
+
+A course-by-course reference for notes, key concepts, and proofs. Each section is meant to be a living document updated as the course progresses.
+
+---
+
+### Discrete Mathematics
+
+> Topics: logic, sets, proofs, relations, functions, combinatorics, graph theory
+
+Notes coming soon.
+
+---
+
+### Systems Programming
+
+> Topics: memory management, pointers, processes, file I/O, concurrency, C/C++
+
+Notes coming soon.
+
+---
+
+### Statistics
+
+> Topics: probability distributions, hypothesis testing, confidence intervals, regression
+
+Notes coming soon.
+
+---
+
+### Differential Equations
+
+> Topics: first-order ODEs, second-order linear equations, systems of ODEs, Laplace transforms
+
+Notes coming soon.
+
+---
+
+### Real Analysis
+
+> Topics: sequences and series, limits, continuity, differentiation, the epsilon-delta definition, metric spaces
+
+Notes coming soon.
+
+---
