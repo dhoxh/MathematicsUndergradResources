@@ -471,27 +471,39 @@ This contradicts $y \notin \mathbb{Q}$. $\blacksquare$
 ### Proof by Induction
 
 To prove $P(n)$ for all $n \geq n_0$:
-1. **Base case:** Verify $P(n_0)$.
-2. **Inductive step:** Assume $P(k)$ (inductive hypothesis). Prove $P(k+1)$.
+
+1. **Base case:** Verify $P(n_0)$ directly.
+2. **Inductive step:** Assume $P(k)$ holds (inductive hypothesis), then prove $P(k+1)$.
 
 **Example:** Prove $\displaystyle\sum_{i=1}^{n} \frac{1}{i(i+1)} = \frac{n}{n+1}$ for all $n \geq 1$.
 
-*Base case* $n=1$: $\dfrac{1}{1 \cdot 2} = \dfrac{1}{2} = \dfrac{1}{1+1}$. ✓
+*Base case* $n = 1$:
+
+$$\frac{1}{1 \cdot 2} = \frac{1}{2} = \frac{1}{1+1} \checkmark$$
 
 *Inductive step:* Assume $\displaystyle\sum_{i=1}^{k} \frac{1}{i(i+1)} = \frac{k}{k+1}$. Then:
+
 $$\sum_{i=1}^{k+1} \frac{1}{i(i+1)} = \frac{k}{k+1} + \frac{1}{(k+1)(k+2)} = \frac{k(k+2)+1}{(k+1)(k+2)} = \frac{(k+1)^2}{(k+1)(k+2)} = \frac{k+1}{k+2}$$
-This matches the formula with $n = k+1$. $\blacksquare$
 
-### Disproving Universal Statements (Counterexample)
+This matches the formula at $n = k+1$. $\blacksquare$
 
-$$\neg\bigl(\forall x \in D,\; P(x) \to Q(x)\bigr) \equiv \exists x \in D \text{ s.t. } P(x) \land \neg Q(x)$$
+---
 
-**Example:** Disprove $\forall\, a,b \in \mathbb{R},\; a^2 = b^2 \Rightarrow a = b$.
+### Disproving Universal Statements
 
-Counterexample: $a = 2$, $b = -2$. Then $a^2 = b^2 = 4$ but $a \neq b$. $\blacksquare$
+To disprove $\forall x \in D,\; P(x) \to Q(x)$, find one **counterexample** — an $x$ where $P(x)$ is true but $Q(x)$ is false:
+
+$$\neg\bigl(\forall x \in D,\; P(x) \to Q(x)\bigr) \equiv \exists\, x \in D \text{ s.t. } P(x) \land \neg Q(x)$$
+
+**Example:** Disprove $\forall\, a, b \in \mathbb{R},\; a^2 = b^2 \Rightarrow a = b$.
+
+Let $a = 2$, $b = -2$. Then $a^2 = b^2 = 4$ but $a \neq b$. $\blacksquare$
+
+---
 
 ### Existential Proofs
-To prove $\exists x$ with some property, exhibit one concrete example.
 
-- *There exists a prime that is even:* $p = 2$. ✓
-- *There exists $n$ expressible as a sum of two primes in two ways:* $10 = 5+5 = 7+3$. ✓
+To prove $\exists\, x$ with some property, exhibit one concrete example — you do not need a general argument.
+
+- *There exists a prime that is even:* $p = 2$. $\checkmark$
+- *There exists $n$ writable as a sum of two primes in two different ways:* $10 = 5+5 = 7+3$. $\checkmark$
