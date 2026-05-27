@@ -10,7 +10,7 @@ nav_order: 2
 
 ## 1. Introduction
 
-A **differential equation** is an equation involving an unknown function and its derivatives. The goal is to find the function $y(x)$ (or $y(t)$) satisfying the equation.
+A **differential equation** is an equation involving an unknown function and its derivatives. The goal is to find the function $y(x)$ or $y(t)$ satisfying the equation.
 
 ### Basic Integration Examples
 
