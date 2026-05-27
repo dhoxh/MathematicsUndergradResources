@@ -2,6 +2,7 @@
 title: Probability Theory
 parent: Math Notes
 nav_order: 3
+has_toc: true
 ---
 
 # Intro to Probability Lecture Notes
