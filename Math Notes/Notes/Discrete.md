@@ -479,7 +479,7 @@ To prove $P(n)$ for all $n \geq n_0$:
 
 *Base case* $n = 1$:
 
-$$\frac{1}{1 \cdot 2} = \frac{1}{2} = \frac{1}{1+1} \checkmark$$
+$$\frac{1}{1 \cdot 2} = \frac{1}{2} = \frac{1}{1+1}$$
 
 *Inductive step:* Assume $\displaystyle\sum_{i=1}^{k} \frac{1}{i(i+1)} = \frac{k}{k+1}$. Then:
 
@@ -505,5 +505,5 @@ Let $a = 2$, $b = -2$. Then $a^2 = b^2 = 4$ but $a \neq b$. $\blacksquare$
 
 To prove $\exists\, x$ with some property, exhibit one concrete example — you do not need a general argument.
 
-- *There exists a prime that is even:* $p = 2$. $\checkmark$
-- *There exists $n$ writable as a sum of two primes in two different ways:* $10 = 5+5 = 7+3$. $\checkmark$
+- *There exists a prime that is even:* $p = 2$.
+- *There exists $n$ writable as a sum of two primes in two different ways:* $10 = 5+5 = 7+3$.
