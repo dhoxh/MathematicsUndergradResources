@@ -1,7 +1,8 @@
 ---
-title: Discrete
+title: Discrete Mathematics
 parent: Math Notes
 nav_order: 1
+has_toc: true
 ---
 # Discrete Mathematics Notes
 
