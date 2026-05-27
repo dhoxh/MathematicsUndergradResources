@@ -2,6 +2,7 @@
 title: Data Structures and Algorithms
 parent: Math Notes
 nav_order: 3
+has_toc: true
 ---
 
 # Lecture 1 — Introduction to Algorithm Analysis
