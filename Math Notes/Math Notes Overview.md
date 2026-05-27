@@ -5,48 +5,26 @@ has_children: true
 permalink: /mathnotes
 ---
 
-## Math Notes
+# Math Notes
 
-A course-by-course reference for notes, key concepts, and proofs. Each section is meant to be a living document updated as the course progresses.
-
----
-
-### Discrete Mathematics
-
-> Topics: logic, sets, proofs, relations, functions, combinatorics, graph theory
-
-Notes coming soon.
+Course-by-course notes, proofs, and key results from the Penn State undergraduate math curriculum. Each page is a living document updated as the course progresses.
 
 ---
+
+### [Discrete Mathematics](./Notes/Discrete)
+Logic, set theory, proofs, combinatorics, and graph theory.
+
+### [Differential Equations](./Notes/DifEq)
+First-order ODEs, linear systems, Laplace transforms, and numerical methods.
+
+### [Numerical Analysis](./Notes/NumericalAnalysis)
+Floating point arithmetic, root-finding, interpolation, quadrature, and IVP solvers.
 
 ### Systems Programming
-
-> Topics: memory management, pointers, processes, file I/O, concurrency, C/C++
-
-Notes coming soon.
-
----
+Memory management, pointers, processes, file I/O, and concurrency in C/C++. — *coming soon*
 
 ### Statistics
-
-> Topics: probability distributions, hypothesis testing, confidence intervals, regression
-
-Notes coming soon.
-
----
-
-### Differential Equations
-
-> Topics: first-order ODEs, second-order linear equations, systems of ODEs, Laplace transforms
-
-Notes coming soon.
-
----
+Probability distributions, hypothesis testing, confidence intervals, and regression. — *coming soon*
 
 ### Real Analysis
-
-> Topics: sequences and series, limits, continuity, differentiation, the epsilon-delta definition, metric spaces
-
-Notes coming soon.
-
----
+Sequences, limits, continuity, differentiation, and the epsilon-delta definition. — *coming soon*
