@@ -122,3 +122,7 @@ At first, this may seem like a lot. Once you get used to it, it becomes a natura
 My goal is to help math majors move from disorganized and manual work to a system that is structured, efficient, and scalable.
 
 This workflow provides a fundamental understanding of productivity and mathematical knowledge in the age of AI and data science
+
+## Other
+If you like this website, check out this computational analysis traffic flow website!
+https://jiahao-zeng.github.io/Math-497-Final-Project/
