@@ -3,7 +3,7 @@ title: Home
 nav_order: 1
 permalink: /
 ---
-# Math Digital Workflow
+# Undergraduate Digital Workflow and Resources
 
 ## Overview
 
