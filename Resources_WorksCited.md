@@ -1,6 +1,6 @@
 ---
 title: Resources & Works Cited
-nav_order: 7
+nav_order: 9
 ---
 # Works Cited
 
