@@ -1,0 +1,1950 @@
+---
+title: Python
+parent: Programming Notes
+nav_order: 1
+has_toc: true
+---
+
+# CMPSC 131 — Python Notes
+
+Consolidated worksheet and assignment notes for CMPSC 131 (Introductory Python), organized by topic with duplicate exercises merged.
+
+---
+
+## 1. Output & Formatting
+
+`print()` is the basic way to produce output. Values can be separated with commas, joined with `+`, or embedded directly in an f-string. The `format()` function and f-string format specs (`:.2f`, `:,`, `:.1%`, `:e`) control decimal places, thousands separators, percentages, and scientific notation.
+
+### Basic print statements
+
+```python
+#worksheet 0
+
+# Q1
+print('hello world')
+
+# Q2
+a = 3
+
+# Q3
+a+=5
+print(a)
+a-=4
+print(a)
+a*=6
+print(a)
+a/=20
+print(a)
+```
+
+### Operator precedence and expressions
+
+```python
+#Q3
+
+#1
+print( 1.7*8)
+#2
+print(7**2)
+#3
+print(1 / (2 **3))
+#4
+print( 3 + (4*5))
+#5
+print((8+ 6) /5)
+#6
+print(3*((-2)**5))
+#7
+print(7//3)
+#8
+print(14 % 4)
+#9
+print(9 % 3)
+#10
+print(14//4)
+#11
+print(2**2)
+#12
+print(5 % 5)
+```
+
+### Number formatting — decimals, commas, percentages, scientific notation
+
+```python
+#worksheet 6
+#Q1
+#65.43
+print('This is a number', format(65.4321, '.2f'))
+
+#Q2
+#987,654.13
+print(f'{987654.129:.2f}')
+
+#Q3
+num1 = 127.899
+num2 = 3465.148
+num3 = 0.3776
+num4 = 264.821
+num5 = 88.081
+num6 = 799.999
+
+print(format(num1, '.2f'))
+print(format(num2, ',.2f'))
+print(format(num3, '.1%'))
+print(format(num4, '.3f'))
+print(format(num5, '.1f'))
+print(format(num6, '.2f'))
+
+#Q4
+print('One', 'Two', 'Three', sep='*')
+print('One', 'Two', 'Three', sep='/')
+print('One', 'Two', 'Three', sep='\t')
+print('One', 'Two', 'Three', sep=':)')
+print('One', 'Two', 'Three', sep='')
+
+#Q5
+numE=12233453
+print(format(numE, ',.2f'))
+print(format(numE, 'e'))
+print(format(numE, '.2e'))
+
+#Q6
+salaryM= float(input('What is your monthly salary: '))
+salaryY= salaryM*12
+print(f'Your annual pay is: ${salaryY:,.2f}')
+                        
+```
+
+### Separators with `sep=`
+
+> **Note:** Same three strings, printed with different separators.
+
+```python
+#Q4
+print('One', 'Two', 'Three', sep='*')
+print('One', 'Two', 'Three', sep='/')
+print('One', 'Two', 'Three', sep='\t')
+print('One', 'Two', 'Three', sep=':)')
+print('One', 'Two', 'Three', sep='')
+```
+
+---
+
+## 2. Variables & Operators
+
+Variables are created by assignment (no type keyword needed). Augmented assignment operators (`+=`, `-=`, `*=`, `/=`) update a variable in place. `type()` reports what kind of value a variable holds.
+
+### Assignment and augmented assignment
+
+```python
+#worksheet 0
+
+# Q1
+print('hello world')
+
+# Q2
+a = 3
+
+# Q3
+a+=5
+print(a)
+a-=4
+print(a)
+a*=6
+print(a)
+a/=20
+print(a)
+
+# Q4
+a = 2.0
+print(type(a))
+```
+
+### Variable naming rules
+
+> **Note:** Which identifiers are legal Python variable names.
+
+```python
+#Q4
+
+#_salesman1 = Valid
+#room@Board = Invalid
+#fOrM_1040 = Valid
+#1040B = Invalid
+#@variable = Invalid
+#INCOME 2008 = Invalid
+```
+
+### Tracing variable reassignment step by step
+
+```python
+#Q9
+
+x=2 #x=2 y=undefined
+y=3 * x #x=2 y=6
+x= y+5 #x=11 y=6
+print(x+4) #x=15 y=6
+y= y+1  #x=11 #y=7
+
+#Q10
+print((x+y)*(x+y)) # =324
+```
+
+### Built-in numeric functions: abs(), round(), int(), and the math module
+
+```python
+#WORKSHEET2
+
+#Q1
+
+x = 5
+y = 7
+print (abs(x-y)-10) #-8
+print (int(x ** 2) + 1.4) #26.4 
+print(round(y + 3.14159,2)) #10.14
+
+#Q2
+#c
+
+#Q3
+#a
+
+#Q4
+#a
+
+#Q5
+
+revenue = 98456
+costs = 45000
+profit = revenue - costs
+print(profit)
+
+#Q6
+
+firstName = "Thomas"
+middleName = "Alva"
+lastName = "Edison"
+yearOfBirth = 1847
+print("The year of birrth of", firstName, middleName, lastName, "is", yearOfBirth)
+
+#Q7
+
+item = 'ketchup'
+regularPrice = 1.80
+discount = .27
+print((regularPrice - discount), 'is the sale price of ketchup')
+
+#Q8
+import math
+radius = float(input('Radius = '))
+area= math.pi * ( radius **2)
+print('The area of the circle with radius', radius, 'is', area)
+```
+
+### A short calculation program (percent → decimal, target heart rate, arithmetic operators)
+
+```python
+#Worksheet 3
+
+#Q1
+
+decimal =(float(input('Enter the percent you want to turn into a decimal: ')))
+print('the decimal is: ', decimal/100)
+print('\n')
+
+#Q2
+
+a= (int(input('Please enter your age: ')))
+print('\n')
+r= (int(input('Please enter your resting heart rate: ')))
+print('\n')
+print('Your training heart rate needs to be: ',  .7 * (220 - a) + .3 * r)
+print('\n')
+#Q3
+numOne= (int(input('Please enter the first number: ')))
+numTwo= (int(input('Please enter the second number: ')))
+print('\n')
+print('The sum is: ', numOne + numTwo)
+print('The product is: ', numOne * numTwo)
+print('The difference is: ', numOne - numTwo)
+print('The quotient is: ', numOne // numTwo)
+print('The remainder is: ', numOne % numTwo)
+```
+
+---
+
+## 3. User Input
+
+`input()` always returns a string, so numeric input needs `int()` or `float()` around it. These worksheets combine input collection with the formatting from Output & Formatting.
+
+### Reading and converting user input
+
+```python
+#Worksheet 3
+
+#Q1
+
+decimal =(float(input('Enter the percent you want to turn into a decimal: ')))
+print('the decimal is: ', decimal/100)
+print('\n')
+
+#Q2
+
+a= (int(input('Please enter your age: ')))
+print('\n')
+r= (int(input('Please enter your resting heart rate: ')))
+print('\n')
+print('Your training heart rate needs to be: ',  .7 * (220 - a) + .3 * r)
+print('\n')
+#Q3
+numOne= (int(input('Please enter the first number: ')))
+numTwo= (int(input('Please enter the second number: ')))
+print('\n')
+print('The sum is: ', numOne + numTwo)
+print('The product is: ', numOne * numTwo)
+print('The difference is: ', numOne - numTwo)
+print('The quotient is: ', numOne // numTwo)
+print('The remainder is: ', numOne % numTwo)
+```
+
+### Validating input before using it (square root example)
+
+```python
+#Q1
+num1=float(input('Enter a number you want the squareroot of: '))
+if num1 >=0:
+    print(format(num1**0.5, '.2f'))
+else:
+    print("The number can't be negative")
+```
+
+---
+
+## 4. Conditionals
+
+`if` / `elif` / `else` branch on boolean conditions. Python evaluates `and`, `or`, and `not` with the usual short-circuit rules, and comparisons can be chained (`1 < age < 13`).
+
+### Boolean logic truth tables and chained comparisons
+
+```python
+#Worksheet 8
+
+#Q1
+#Cond 1 Cond 2| Cond 1 and Cond 2| Cond 1 or Cond 2| not Cond 2
+#True      True                 True                            True                   False
+#True      False                False                           True                   True
+#False     True                 False                           True                   False
+#False     False                False                           False                  True
+
+#Q2
+a = 1
+b = 1.5
+3 * a == 2 * b
+#true
+((5 - a) * b) < 7
+#true
+b <= 3
+#true
+a ** b == b ** a
+#false
+a ** (5 -2) > 7
+#false
+3e-2 < .01 * a
+#false
+(a < b) or (b < a)
+#true
+(a * a < b) or not(a * a < a)
+#true
+not((a < b) and (a < (b + a)))
+#false
+not(a < b) or not (a < (b + a))
+#false
+((a == b) and (a * a < b * b)) or ((b < a) and (2 * a < b))
+#false
+((a == b) or not (b < a)) and ((a < b) or (b == a + 1))
+#true
+
+#Q3
+x = int(input('Enter the first number: '))
+y = int(input('Enter the second number: '))
+if y > x:
+    print('The larger number value is: ', float(y))
+
+#Q4
+string =  'This is a sentence'
+L1= string.split(' ')
+L1.reverse()
+print(L1)
+```
+
+### Multi-way branching with elif (day-of-week lookup)
+
+```python
+#Q2
+Monday= 1
+Tuesday = 2
+Wednesday = 3
+Thursday = 4
+Friday = 5
+Saturday = 6
+Sunday  = 7
+weekDay=int((input('Enter a number from the range of 1 through 7: ')))
+if weekDay == Monday :
+    print('The day is Monday')
+elif weekDay == Tuesday:
+    print('The day is Tuesday')
+elif weekDay == Wednesday:
+    print('The day is Wednesday')
+elif weekDay == Thursday:
+    print('The day is Thursday')
+elif weekDay == Friday:
+    print('The day is Friday')
+elif weekDay == Saturday:
+    print('The day is Saturday')
+elif weekDay == Sunday:
+    print('The day is sunday')
+else:
+    print('Please enter a number between 1 and 7')
+    
+```
+
+### Categorizing a value into ranges (age groups, weight thresholds)
+
+```python
+#worksheet10
+age = int(input('Please enter your age: '))
+if age<= 1:
+    print('infant')
+elif 1 < age < 13:
+    print('child')
+elif 13 <= age < 20:
+    print('teenager')
+elif age >= 20:
+    print('adult')
+
+mass = float(input("Enter the object's mass: "))
+weight = mass* 9.8
+if weight > 500:
+    print('The object is too heavy it weighs more than 500.0 newtons')
+elif weight < 100:
+    print('The object is too light it weighs less than 100.00 newtons')
+
+for i in range (0, 101):
+    if i%2==0:
+        print(i)
+```
+
+### Checking primality
+
+> **Note:** Assignment 2, Question 1 — uses a for/else to detect whether any divisor was found.
+
+```python
+#Question 1 Check Prime
+
+is_prime = int(input("Enter a number to check if it's prime: "))
+
+if is_prime < 2:
+    print("Not Prime")
+else:
+    for i in range(2, is_prime):
+        if is_prime % i == 0:
+            print("Not Prime")
+            break
+    else:
+        print("Prime")
+```
+
+### Membership testing with `in` (vowel check)
+
+```python
+#Question 2 
+vowels = ["a", "e", "i", "o", "u", "y"]
+letter = input("Enter a letter to check if vowel: ")
+
+if letter in vowels:
+    print("This letter is a vowel")
+else:
+    print("This letter is not a vowel")
+```
+
+### Picking the max of three values
+
+```python
+def max_of_three(a, b, c):
+    if a > b and a > c:
+        return f"Max is: {a}"
+    elif b > a and b > c:
+        return f"Max is: {b}"
+    else:
+        return f"Max is: {c}"
+
+
+print(max_of_three(1, 2, 3))
+```
+
+---
+
+## 5. Loops — for
+
+`for` loops iterate over a `range()` or any sequence. They're the tool of choice when the number of iterations is known ahead of time, and they nest freely for grid/table-style problems.
+
+### Looping over a range, with a step and formatted columns
+
+```python
+#worksheet11
+#q1
+total = 0 
+for i in range (1,6):
+    books = int(input('Number of books collected today: '))
+    total = books + total
+print('The total number of books is:', total)
+
+#q2
+print('Minutes\tCalories')
+print('-----------------')
+for m in range (10, 35, 5):
+   calories = m*4.2
+   print(m, '\t', calories)
+   
+```
+
+### Nested for loops (printing patterns, triple-nested counters)
+
+```python
+#worksheet12
+#Q1
+factorial = 1
+n = int(input('Enter a number: '))
+if n >= 1:
+    for i in range (1, n+1):
+        factorial= factorial * i
+    print('The factorial of', n, 'is', factorial)
+else:
+    print('please enter a positive integer')
+#Q2
+for i in range (1):
+    for j in range(1, 7):
+        print('*'*j)
+
+#nested loops example
+for i in range(2):
+    for j in range(2):
+        for k in range(2):
+            print(i, j, k)
+```
+
+### Finding numbers in a range whose digits are all even
+
+> **Note:** Assignment 2, Question 3.
+
+```python
+#Question 3
+
+for num in range(200, 501):
+    digits = str(num)
+    divisible = True   
+    for d in digits:
+        if int(d) % 2 != 0:
+            divisible = False
+            break
+    if divisible:
+        print(num)
+```
+
+### Counting duplicate pairs with a nested loop
+
+```python
+#worksheet31
+l1 = [1,5,6,5,6,7,7,1]
+#Q1
+count = 0
+for i in range(len(l1)-1):
+    for j in range(i + 1, len(l1)):
+        if l1[i] == l1[j]:
+            count += 1
+print(count)
+```
+
+### Triangle / staircase patterns with nested loops
+
+```python
+#inclassquestion
+for i in range (1,6):
+    print(' '* i, i)
+```
+
+---
+
+## 6. Loops — while
+
+`while` loops run until a condition becomes false — the right tool when you don't know the number of iterations in advance, such as reading input until a sentinel value appears.
+
+### Sum-until-negative (sentinel-controlled loop)
+
+> **Note:** This exact exercise appears twice — Assignment 2 Q4 and Worksheet 13 Q1 — shown once here.
+
+```python
+#Question 4
+
+sum = 0
+
+while True:
+    x = int(input('Enter a positive number (negative to quit): '))
+    if x < 0:
+        break
+    sum = sum + x
+print('Total: ', f'{sum:.2f}')
+```
+
+### Password retry loop
+
+```python
+#Q2
+password = input('Enter password: ')
+while True:
+    if password != ('billgates'):
+        print('Incorrect password!')
+        password = input('Try again, Enter password or type quit to exit: ')
+    if password == ('quit'):
+        break
+    if password == ('billgates'):
+        print('Done!')
+        break
+```
+
+### Building a list from repeated input, then computing a running product
+
+```python
+#worksheet15
+#Q1
+def string(chat):
+    if len(chat) <= 160:
+        return(chat)
+    elif len(chat) > 160:
+        return(chat[:160])
+c = 'hello world' * 100
+print(string(c))
+
+#Q2
+
+m = []
+while True:
+    n = float(input('Enter a list of numbers you want the product of; enter zero to quit: '))
+    if n >= 1:
+        m.append(n)
+    else:
+        break
+
+def numbers(m):
+    p = 1
+    for i in range(len(m)):
+       p = p * m[i]
+    return p
+print(f'The product is: {numbers(m):,.2f}')
+```
+
+---
+
+## 7. Strings
+
+Strings are indexed and sliced like lists (`s[start:end:step]`, negative indices count from the end) but are immutable — string methods like `.upper()`, `.split()`, `.strip()`, and `.find()` return new strings.
+
+### Indexing and slicing
+
+```python
+#Worksheet 4
+
+#Q1
+
+phoneNumber = '234-5678'
+print('My phone number is ' + phoneNumber)
+
+#Q2
+quote = 'I came to Casablanca for the waters.'
+print(quote + ':' + ' Bogart')
+
+#Q3 
+foR = 'happily ever after'
+print('They lived ' + foR)
+
+#5
+print('Python' [4])
+#6
+print('Python'[-2])
+#7
+print('Hello Python!'[-9])
+#8
+print('Python'[5])
+#9
+print('Python'[0:3])
+#10
+print('Python'[2:2])
+#11
+print('Python'[ :2])
+#12
+print('Python'[2: ])
+#13
+print('Python'[-3:-2])
+#14
+print('Python'[-5:-1])
+#15
+print('Python'[2:-2])
+#16
+print('Python'[-4:4])
+#17
+print('Python'[ : ])
+#18
+print('Python'[-10:10])
+#19
+print('Python' .find('tho'))
+#20
+print('Python' .find('ty'))
+#21
+print('Python' .find('oh'))
+#22
+print('Python' .find('Pyt'))
+#23
+print('whizzbuzz' .rfind('zz'))
+#24
+print('whizzbuzz' .find('zz'))
+#25
+print(' Python' .lstrip())
+#26
+print('hello_world' .startswith('hell'))
+#27
+print('smallElements' .capitalize())
+#28
+print('Hello_python' .rpartition('_'))
+#29
+print('PyThOn' .swapcase())
+#30
+print('python/java/c++' .split('/'))
+#31
+print('8 Ball' .title())
+#32
+print(len('brrr'))
+#33
+print('8 Ball' .upper())
+#34
+print('whippersnapper' .count('pp'))
+#35
+print('Python' [-1*len('Python')-1:3])
+#36
+print('Python' .lower())
+#37
+print('the artist' .title())
+#38
+print(len('Gravity     '.rstrip()))
+#39
+print(len('Grand Hotel'[ :6] .rstrip()))
+#40
+print('king lear' .title())
+#41
+print('let it go'. title() .find('G'))
+#42
+print('Hello World!' .lower() .find('wo'))
+#43
+print('Amazon' .lower() .count ('a'))
+```
+
+### Concatenation and building sentences from variables
+
+```python
+#Q6
+
+firstName = "Thomas"
+middleName = "Alva"
+lastName = "Edison"
+yearOfBirth = 1847
+print("The year of birrth of", firstName, middleName, lastName, "is", yearOfBirth)
+
+#Q7
+
+item = 'ketchup'
+regularPrice = 1.80
+discount = .27
+print((regularPrice - discount), 'is the sale price of ketchup')
+```
+
+### Slicing to split a full name into first/last
+
+```python
+#worksheet5
+#Q1
+str1 = 'Here are a string'
+print(str1[0 : 4] + ' is ' + str1[9: ] )
+
+#Q2
+name = input('Enter your full name: ')
+index = name.rfind(' ')
+print('Last name: ' + name[index : ] + '\n' + 'First name(s): ' + name[0 : index])
+```
+
+### Extended slicing with a step
+
+> **Note:** `s[::2]` walks every 2nd character; `s[2:9:3]` starts at index 2, stops before 9, stepping by 3.
+
+```python
+#Q1
+s = 'What is your name?'
+#all characters by 2, Wa syu ae
+#all characters from 2 to 9 by 3, aiy
+```
+
+### Limiting a string to a max length
+
+> **Note:** Same exercise appears as Worksheet 15 Q1 and as w16A's `msglimiter` — the second version below.
+
+```python
+#Q1
+def string(chat):
+    if len(chat) <= 160:
+        return(chat)
+    elif len(chat) > 160:
+        return(chat[:160])
+c = 'hello world' * 100
+print(string(c))
+```
+
+```python
+def msglimiter(message):
+
+    if len(message) <= 160:
+        return message
+    else:
+        return message[:160]
+
+
+msg1 = "Hello"
+msg2 = "a" * 165 
+
+print(msglimiter(msg1))  
+print(msglimiter(msg2))  
+```
+
+### Reversing a string (two approaches)
+
+```python
+def reverse_string(reverse):
+    return reverse[::-1]
+
+reversed_string = input("Enter a string you want to reverse: ")
+print(reverse_string(reversed_string))
+```
+
+```python
+#inclassquestion
+m = 'hello'
+s = ''
+p = ''
+#i
+for i in range(len(m)):
+    print(m[-i-1], end='')
+#ii
+for i in m:
+    s = i + s
+print(s)
+```
+
+### Palindrome check
+
+```python
+# Q2
+
+string = str(input())
+
+
+def palindrome(s):
+    if string[::-1] == string:
+        print("This string is a palindrome.")
+    else:
+        print("This string is not a palindrome.")
+
+
+palindrome(string)
+```
+
+### Sorting the characters of a string
+
+> **Note:** Same idea appears in Worksheet 17 Q4 and again as the standalone function in w19.
+
+```python
+#Q4
+string = input()
+def sorting(string):
+    list1 = list(string)
+    list1.sort()
+    s = ''.join(list1)
+    return s
+print(sorting(string))
+```
+
+```python
+def sort_string(s):
+    chars = list(s)
+    chars.sort()
+    return "".join(chars)
+
+
+print(sort_string("zyxuwakjfnawbc"))
+```
+
+### Splitting a sentence and stripping trailing punctuation
+
+```python
+#Q3
+sent = str(input('Please enter a sentence: '))
+l1 =[]
+l1 = sent.split(' ')
+l2 = l1
+for i in l1:
+    if i[-1] in string.punctuation:
+        l2[l1.index(i)] = i[0: -1]
+print(l2) 
+```
+
+### Building an alphabet string from character codes
+
+```python
+#Q2
+list1=[chr(i) for i in range(65, 91)]
+print(''.join(list1))
+```
+
+---
+
+## 8. Lists
+
+Lists are ordered, mutable sequences. Watch the difference between `y = x` (an alias — both names point to the same list) and `b = a[:]` (a real copy) when one list gets mutated.
+
+### Indexing, slicing, len(), .index()
+
+```python
+#Worksheet 7
+
+countries = ['Japan', 'India', 'Algeria', 'Brazil', 'Angola', 'England', 'Argentina',
+'Portugal', 'China', 'Australia', 'Austria', 'Ghana', 'Bahamas', 'Bangladesh', 'Belgium',
+'Bhutan', 'Bosnia', 'Cameroon', 'Canada', 'Denmark']
+
+#Q1
+print(countries[2], countries[-1])
+
+#Q2
+print(countries[3], countries[-3])
+
+#Q3
+print(countries[18], countries[16])
+
+#Q4
+print(len(countries))
+
+#Q5
+print(countries[-1],  countries[19])
+
+#Q6
+print(countries.index('Cameroon'), countries.index('Ghana'))
+
+#Q7
+print(countries[len(countries) - 1], countries[-1])
+
+#Q8
+print(countries[0].upper())
+
+#Q9
+countries.insert(0, 'Jordan')
+print(countries[0])
+
+#Q5
+countries.insert(5, 'Germany')
+print(countries[5])
+
+#Q11
+countries.append('Nigeria')
+print(countries[-1])
+
+#Q12
+print(countries)
+del countries[4]
+del countries[5]
+print(countries)
+```
+
+### Aliasing vs. copying a list
+
+```python
+#Q2
+#A)
+x = [1, 2, 3]
+y = x
+x[0] = 12
+print(y[:])
+
+#B)
+a = [1, 2, 3]
+b = a[:]
+b[0] = 20
+print(a[:])
+
+#Q3
+
+w = 'abcde'
+z = list(w)
+z[0] = 1
+z[2] = 'hello'
+z[3] = 15
+z.append(2)
+print(z[:])
+```
+
+### Turning a string into a mutable list of characters
+
+```python
+#Q3
+
+w = 'abcde'
+z = list(w)
+z[0] = 1
+z[2] = 'hello'
+z[3] = 15
+z.append(2)
+print(z[:])
+```
+
+### Preallocating a list
+
+```python
+#Q1
+
+l1 = [0]*100
+```
+
+### List membership, .append(), .insert(), and two small helper functions
+
+> **Note:** `is_sorted` checks order; `remove_duplicates` goes through a `set()` and back to a `list`.
+
+```python
+careers = ["programmer", "nurse", "professor", "doctor"]
+
+index_of_professor = careers.index("professor")
+print("Index of 'professor':", index_of_professor)
+
+print("'professor' in careers:", "professor" in careers)
+
+careers.append("data analyst")
+
+careers.insert(0, "engineer")
+
+print("List of all careers:")
+for i in careers:
+    print("-", i)
+
+
+def is_sorted(l):
+    for i in range(len(l) - 1):
+        if l[i] > l[i + 1]:
+            return False
+    return True
+
+
+print("\nis_sorted([1, 2, 2]):", is_sorted([1, 2, 2]))  # True
+print("is_sorted(['b', 'a']):", is_sorted(["b", "a"]))  # False
+
+
+def remove_duplicates(l):
+    return list(set(l))
+
+
+print("[1, 2, 2, 3, 4, 4, 5, 5, 6, 6]")
+print("After removing duplicates")
+print(remove_duplicates([1, 2, 2, 3, 4, 4, 5, 5, 6, 6]))
+
+
+multiples_of_ten = [10 * i for i in range(1, 11)]
+print("\nFirst ten multiples of ten:", multiples_of_ten)
+```
+
+---
+
+## 9. List Comprehensions
+
+A list comprehension `[expr for item in iterable if condition]` builds a list in one line — it's a compact replacement for a for-loop that appends to a list.
+
+### Comprehensions with a condition, and filtering by even/odd
+
+```python
+#worksheet18
+#Q1
+
+[(n*n) for n in range(13) if (n*n)%2==0]
+#creates a list where every even number is squared from 0 to 12
+
+#q2
+
+even = 0
+L=[1, 5, 3, 6, 2, 9, 7, 8, 0]
+print(sum([i for i in L if (i)%2==0]))
+print(sum([i for i in L if (i)%2!=0]))
+
+#q3
+
+x= 'January 1, 2000'
+print([i for i in x if i.isalpha()])
+```
+
+### Building a list of tuples from a dictionary, and reversing each tuple
+
+> **Note:** Using the dictionary `D = {'a':15, 'c':35, 'b':20}` from the Dictionaries section.
+
+```python
+D = {'a':15, 'c':35, 'b':20}
+
+#D
+
+l1 = [i for i in D.items()]
+print(l1)
+
+#E
+l2 = [i[::-1] for i in D.items()]
+print(l2)
+```
+
+### List of ten multiples of ten
+
+```python
+multiples_of_ten = [10 * i for i in range(1, 11)]
+print("\nFirst ten multiples of ten:", multiples_of_ten)
+```
+
+---
+
+## 10. Searching & Sorting Algorithms
+
+These implement classic algorithms by hand instead of calling `.sort()`, to show how comparison-based sorting actually works.
+
+### Selection-sort-style swap loop
+
+```python
+#Q1
+import random
+l1 = [random.randint(0,20) for i in range(10)]
+print(l1)
+x = 0
+for i in range(len(l1)-1):
+    for j in range(i + 1, len(l1)):
+        if l1[j] <= l1[i]:
+            l1[i], l1[j] = l1[j], l1[i]
+print(l1)
+```
+
+### Bubble sort
+
+```python
+#Q2
+bubble = [random.randint(0,10) for i in range(10)]
+print(bubble)
+def bubblesort(list1):
+    for i in range(len(list1)-1):
+        for j in range(0, len(list1)-i-1):
+            if list1[j] > list1[j+1]:
+                list1[j], list1[j+1] = list1[j+1], list1[j]
+    print(list1)
+bubblesort(bubble)
+```
+
+### Checking whether a list is already sorted
+
+```python
+def is_sorted(l):
+    for i in range(len(l) - 1):
+        if l[i] > l[i + 1]:
+            return False
+    return True
+
+
+print("\nis_sorted([1, 2, 2]):", is_sorted([1, 2, 2]))  # True
+print("is_sorted(['b', 'a']):", is_sorted(["b", "a"]))  # False
+```
+
+---
+
+## 11. Dictionaries
+
+Dictionaries map keys to values. `.items()`, `.keys()`, and `.values()` give iterable views; `.get()` looks up a key without raising an error if it's missing; `dict(zip(list1, list2))` builds a dictionary out of two parallel lists.
+
+### Iterating with .items(), .get(), adding and deleting keys
+
+```python
+#worksheet20
+
+#Q1
+D = {'a': 10, 'b': 20, 'c': 30}
+for key, value in D.items(): print(key, value)
+
+#Q2
+V = {'a':3, 'x':7, 'r':5}
+
+#a
+print(V.get('x'))
+
+#b
+for key, value in V.items():
+    if value == 7:
+        print(key)
+
+#c
+V['z'] = 10
+print(V)
+
+#d
+del V['a']
+print(V)
+
+#inclass question
+for i in range(0,6):
+    print(' '*i, i)
+for i in range(6,11):
+    print(' '*(-i+10), i)
+```
+
+### Iterating keys, values, and pairs separately; building from zip()
+
+```python
+#worksheet21
+
+#Q1
+D = {'a':15, 'c':35, 'b':20}
+
+#A
+print('Keys: ', end=' ') 
+for key, value in D.items(): print(key, end=' ')
+
+#B
+print('\n''Values: ', end=' ')
+for key, value in D.items(): print(value, end=' ')
+
+#C
+print('\n''Key-Value Pairs: ')
+for key, value in D.items(): print(key, value)
+
+#D
+
+l1 = [i for i in D.items()]
+print(l1)
+
+#E
+l2 = [i[::-1] for i in D.items()]
+print(l2)
+
+#2
+
+first_names =  ['Jane', 'John', 'Jack']
+last_names = ['Doe','Deer', 'Black']
+full_names = dict(zip(first_names,last_names))
+print(full_names)
+```
+
+### Multiple parallel dictionaries for a lookup table (course/room/instructor/time)
+
+```python
+#worksheet24
+
+#Q1
+
+l1 = ['CS101', 'CS102','CS103', 'NT110','CM241']
+l2 = [3004, 4501, 6755, 1244, 1411]
+l3 = ['Haynes','Alvarado','Rich','Burke','Lee']
+l4 = ['8:00 a.m.','9:00 a.m.', '10:00 a.m.', '11:00 a.m.', '1:00 p.m.']
+
+d1 = dict(zip(l1,l2))
+d2 = dict(zip(l1,l3))
+d3 = dict(zip(l1,l4))
+#print(d1)
+#print(d2)
+#print(d3)
+course = str(input('Enter a course number: '))
+print(f'The details for {course} are: ')
+print('Room: ', d1.get(course))
+print('Instructor: ', d2.get(course))
+print('Time: ', d3.get(course))
+```
+
+---
+
+## 12. Sets
+
+Sets are unordered collections of unique elements — good for membership tests and for operations like union, intersection, and difference. Building a `set()` from a string keeps only its unique characters.
+
+### Subsets and building a set from a string
+
+```python
+#worksheet23
+
+#Q1
+my_set =set( 'bcd')
+your_set = set('abcde')
+
+#a
+my_set.issubset(your_set)
+#true
+
+#b
+your_set.issubset(my_set)
+#false
+
+#Q2
+
+string = set('pepper')
+print(string)
+string_red = ''.join(string)
+print(string_red)
+
+#Q3
+
+aset={'A', 'B', 'C', 'D'}
+bset={'G', 'B', 'C', 'H'}
+#intersection = 'B', 'C'
+#union = 'A', 'B', 'C', 'D', 'G', 'H'
+#difference aset - bset = 'A','D'
+#difference bset - aset = 'G', 'H'
+#symmetric difference aset ^ bset 'A', 'D', 'G','H'
+
+#extraquestion
+l1= [1,3,9,25]
+def seq(s):
+    x = ''
+    for i in range (len(s)-1):
+        a = l1[i]
+        b = l1[i+1]
+        c = b < a
+        if c == True:
+            x = 'No. This is not an increasing sequence.'
+            break
+        else:
+            x = 'Yes. This is an increasing sequence.'
+    return x
+print(seq(l1))
+```
+
+---
+
+## 13. Functions
+
+`def` creates a reusable block of code with parameters and a `return` value. Good functions take their inputs as parameters and hand results back with `return`, rather than reading/printing globals directly.
+
+### A function with an early return based on a condition
+
+```python
+def factorial(n):
+    if n < 0:
+        return "Cannot take a factorial of a negative number"
+    elif n == 0 or n == 1:
+        return 1
+    else:
+        result = 1
+        for i in range(2, n + 1):
+            result *= i
+        return result
+
+
+x = int(input("Enter a number you wish to take the factorial of: "))
+print(factorial(x))
+```
+
+### A function that just prints (no return value)
+
+```python
+def user_input():
+    s = input("Enter a string: ")
+    print(s)
+
+
+user_input()
+```
+
+### Physics-style formulas as functions (circle area, mass-energy, score comparison)
+
+> **Note:** The same three functions appear, written independently, in both Worksheet 14 and w15.
+
+```python
+#worksheet14
+#Q1
+def area_circle(radius):
+    return (radius**2)*(3.14)
+r = float(input('Enter the radius of the circle: '))
+print(f'Area of the circle is: {area_circle(r):.2f}')
+
+#Q2
+c = 3e8 #meters/second
+def energy(mass):
+    return mass*(c**2)
+m = float(input('Enter the mass of the object: ')) #in kg
+print(f'The energy equivalent is : {energy(m):.2e} Joules')
+
+def score(Team1, Team2):
+    if Team1 > Team2:
+        print('Team 1 won')
+    elif Team2 > Team1:
+        print('Team 2 won')
+    elif Team1 == Team2:
+        print('The game was a tie')
+
+T1 = int(input('Enter the score of Team1: '))
+T2 = int(input('Enter the score of Team2: '))
+score(T1, T2)
+```
+
+```python
+def area_of_circle(r):
+    area = 2*r*3.14
+    return (f"Area: {area}")
+radius = float(input("What is the radius of the circle?: "))
+print(area_of_circle(radius))
+
+
+def energy(m):
+    c = 3e8
+    e = m*(c**2)
+    return (f"The energy of this mass is: {e}J")
+mass = float(input("What is the mass?: "))
+print(energy(mass))
+
+def score(t1,t2):
+    if t1>t2:
+        print("Team 1")
+    elif t2>t1:
+        print("Team 2")
+    else:
+        print("Tie")
+team1 = int(input("Score of team 1:"))
+team2 = int(input("Score of team 2:"))
+score(team1,team2)
+```
+
+### A function that returns a running product over a list
+
+```python
+def product(L):
+    x = 1
+    for i in L:
+        x *= i
+    return x
+
+print(product([1, 2, 3, 4]))   
+print(product([5, 5, -2]))    
+```
+
+### A menu-driven program built entirely from small functions
+
+```python
+def message():
+    print("You chose message")
+def contacts():
+    print("You chose contacts")
+def games():
+    print("You chose games")
+def settings():
+    print("You chose settings")
+def videos_and_music():
+    print("You chose videos and music")
+def web():
+    print("You chose web")
+def make_choice():
+    print("(M)essage")
+    print("(C)ontacts")
+    print("(G)ames")
+    print("(S)ettings")
+    print("(V)ideos and Music")
+    print("(W)eb")
+    choice = input("Select a choice:")
+    
+    if choice == 'm':
+        message()
+    elif choice == 'c':
+        contacts()
+    elif choice == 'g':
+        games()
+    elif choice == 's':
+        settings()
+    elif choice == 'v':
+        videos_and_music()
+    elif choice == 'w':
+        web()
+    else:
+        print("Please select a valid choice")
+
+make_choice()
+```
+
+### The absolute simplest function
+
+```python
+def sum(x,y):
+    return x+y
+
+print(sum(5,5))
+```
+
+---
+
+## 14. Recursion
+
+A recursive function calls itself on a smaller version of the problem until it reaches a base case. Every recursive function needs both a base case (to stop) and a recursive case (that makes progress toward it).
+
+### Recursive sum and factorial
+
+```python
+#worksheet27
+
+#Q1
+x = int(input('Enter a number n to find the sum: '))
+def sum(s):
+    if s == 1:
+        return 1
+    else:
+        return s + sum(s-1)
+print(f'Sum = {sum(x)}')
+
+#Q2
+num = int(input('Enter a number n to find the factorial n!: '))
+def factorial(n):
+    if n <= 1:
+        return 1
+    else:
+        return n * factorial(n-1)
+print(f'Factorial: {factorial(num)}')
+```
+
+### Recursive Fibonacci and a recursive printing pattern
+
+```python
+#worksheet28
+
+#Q1
+number = int(input('Enter an index: '))
+def fib(n):
+    if n == 0 or n == 1:
+        return 1
+    
+    else:
+        return fib(n-1) + fib(n-2)
+print(f'The Fibonacci number at index {number} is {fib(number)}')
+
+#Q2
+ast = int(input('Enter a number for the pattern: '))
+def pattern(s):
+    if s == 0:
+        return 
+    else:
+        print(s * '*')
+        pattern(s-1)
+pattern(ast)
+```
+
+---
+
+## 15. Lambda Functions & map()
+
+`lambda` writes a small, unnamed function inline — handy as the `key=` argument to `sorted()`, or as the function passed to `map()`.
+
+### Lambdas with a default argument, and computing a mean
+
+```python
+#Q1 
+energy = lambda m, c=3e8: m * (c**2)
+print(f'E = {energy(10):.1e}')
+
+#Q2
+l1 = [1,2,3,4]
+mean = lambda l1: sum(l1)/len(l1)
+print(f'The average of the list is: {mean(l1)}')
+```
+
+### Custom sort order with sorted(..., key=lambda ...)
+
+```python
+#Q3
+list1 = ['c', 'D', 'a', 'B']
+list2 = sorted(list1, key = lambda letter: letter.lower())
+print(list2)
+```
+
+### map() with a lambda to transform a list of random character codes
+
+```python
+#q1
+import random
+l1 = [random.randint(97,120) for i in range(20)]
+print(list(map(lambda x: chr(x), l1)))
+l2 = list(map(lambda x: x+2, l1))
+print(list(map(lambda x: chr(x), l2)))
+```
+
+---
+
+## 16. Variable-Length Arguments (*args)
+
+`*args` lets a function accept any number of positional arguments, collected into a tuple inside the function.
+
+### Sum of squares over any number of arguments
+
+```python
+#q2
+def sumsq(*args):
+    list1 = []
+    for i in args:
+        list1.append(i**2)
+    y = sum(list1)
+    return y
+print(sumsq(1,2,3))
+```
+
+---
+
+## 17. File I/O
+
+`open(filename, mode)` opens a file for `'w'` (write, overwrites), `'r'` (read), or `'a'` (append). Always `.close()` the file when done (or use a `with` block).
+
+### Writing to a file, then reading it back
+
+```python
+#worksheet25
+
+#Q1
+my_name = open('my_name.txt', 'w')
+my_name.write('Your name')
+my_name.close()
+
+#Q2
+my_name = open('my_name.txt' , 'r')
+name = my_name.read()
+print(name)
+my_name.close()
+
+#Q3
+
+number_list = open('number_list.txt', 'w')
+for i in range(1,101):
+    number_list.write(f'{i} \n')
+number_list.close()
+```
+
+> **Note:** This worksheet produced the two data files below, referenced elsewhere in the set.
+
+```text
+Your name
+```
+
+> **Note:** number_list.txt (100 lines, 1–100) — truncated here for space:
+
+```text
+1 
+2 
+3 
+4 
+5 
+...
+98 
+99 
+100 
+```
+
+---
+
+## 18. Exception Handling
+
+`try` / `except` catches errors instead of letting the program crash. You can catch specific exception types (`ValueError`, `FileNotFoundError`) or use a bare `except:` as a catch-all — specific first.
+
+### Catching ValueError, then a generic catch-all
+
+```python
+#Q1
+try:
+    x = float('abc123')
+    print('The conversion is complete.')
+except IOError:
+    print('This code caused an IOError.')
+except ValueError:
+    print('This code caused a ValueError.')
+print('The end.')
+
+#This code caused a ValueError
+#The end.
+
+#Q2
+try:
+    x = float('abc123')
+    print(x)
+except IOError:
+    print('This code caused an IOError.')
+except ZeroDivisionError:
+    print('This code caused a ZeroDivisionError.')
+except:
+    print('An error happened.')
+print('The end.')
+#An error happened
+#The end.
+```
+
+### Catching FileNotFoundError and ValueError together when reading a file
+
+> **Note:** Reads ages.txt, whose sole contents are:
+
+```text
+0
+```
+
+```python
+#Q3
+try:
+    ages = open('ages.txt','r')
+    a = int(ages.read())
+    print('Age:', a)
+    ages.close()
+except FileNotFoundError:
+    print('File ages.txt not found.')
+except ValueError:
+    print('File ages.txt contains an invalid age.')
+```
+
+---
+
+## 19. Classes & OOP
+
+A class bundles data (attributes) and behavior (methods) together. `__init__` sets up a new instance; `self` refers to the specific instance a method is called on. Double-underscore attributes (`self.__name`) are name-mangled to discourage direct outside access, which is why getter/setter methods are provided.
+
+### A class with private attributes and getters/setters
+
+```python
+class Pet:
+    def __init__(self, type, age, name):
+        self.__type = type
+        self.__age = age
+        self.__name = name
+
+    def set_type(self, type):
+        self.__type = type
+    def set_age(self, age):
+        self.__age = age
+    def set_name(self, name):
+        self.__name = name
+    
+    def get_type(self):
+        return self.__type
+    def get_age(self):
+        return self.__age
+    def get_name(self):
+        return self.__name
+    
+    def __str__(self):
+        return ('Name: ' + str(self.__name)
+                + '\nType: ' + str(self.__type)
+                + '\nAge: ' + str(self.__age))
+```
+
+### Creating an instance from user input
+
+```python
+#worksheet34
+import Pets
+#Q1
+x = input("What is the pet's name?: ")
+y = int(input("What is the pet's age?: "))
+z = input("What type of pet is it?: ")
+
+favpet = Pets.Pet(x, y, z)
+print(favpet)
+```
+
+### Conceptual review — reading through a class's behavior by hand
+
+> **Note:** Worksheet 33 is a set of predict-the-output questions about self and class methods, answered inline as comments.
+
+```python
+#worksheet33
+
+#Q1
+# self is not defined
+
+#Q2
+#the output will be 1
+
+#Q3
+#the output will be 3.14
+
+#Q4
+#the output will be 4
+
+#Q5
+#the output will be 5
+
+#Q6
+#the output will be 12.56
+
+#Q7
+#the output will be 18.84
+
+#Q8
+#the output will be 18.84
+
+#Q9
+#the output will be 12.56
+```
+
+### Mini project: a library system (Book / Library classes)
+
+> **Note:** Two cooperating classes — a Book holds its own data, a Library manages a collection of Books.
+
+```python
+class Book:
+    def __init__(self, title, author, available=True):
+        self.title = title
+        self.author = author
+        self.available = available
+
+
+class Library:
+    def __init__(self):
+        self.books = []
+
+    def add_book(self, book):
+        self.books.append(book)
+
+    def borrow_book(self, title):
+        for book in self.books:
+            if book.title == title:
+                if book.available:
+                    book.available = False
+                    print(f"'{title}' borrowed successfully.")
+                else:
+                    print(f"'{title}' is not available.")
+                return
+        print(f"'{title}' not found in library.")
+
+    def display_books(self):
+        print("\nBooks in library:")
+        for book in self.books:
+            status = "Available" if book.available else "Checked Out"
+            print(f"{book.title} - {status}")
+
+
+library = Library()
+b1 = Book("Python Basics", "Joey")
+b2 = Book("Data Science 101", "Amber", False)
+
+library.add_book(b1)
+library.add_book(b2)
+
+library.borrow_book("Python Basics")
+library.borrow_book("Data Science 101")
+library.display_books()
+```
+
+---
+
+## 20. NumPy
+
+NumPy's `ndarray` supports vectorized math and multi-dimensional indexing that plain lists don't. `.shape`, `.size`, and `.ndim` describe an array's structure; slicing works across both axes at once.
+
+### Array creation, shape/size/ndim, slicing, and aggregate functions
+
+```python
+#worksheet35
+import numpy as np
+
+#Q1
+
+matrix = np.array([[5, 8, 2, 0],
+                   [1, 1, 3, 5],
+                   [3, 7, 9, 2]])
+
+#a
+print(matrix.shape)
+#b
+print(matrix.size)
+#c
+print(matrix.ndim)
+#d
+print(matrix[2:])
+#e
+print(matrix[:,1])
+#f
+a = matrix + 50
+print(a)
+#g
+print(np.min(matrix))
+print(np.max(matrix))
+#h
+print(f'{np.mean(matrix):.2f}')
+print(f'{np.var(matrix):.2f}')
+#Q2
+x = np.zeros(15, dtype = int)
+print(x)
+#Q3
+y = np.ones(9, dtype = int)
+print(y)
+#Q4
+z = np.ones(7, dtype = int)*5
+print(z)
+#Q5
+f = np.arange(36).reshape(6,6)
+print(f)
+
+[53, 96, 60, 54, 67, 77]
+53, 60, 96, 54, 67, 77
+53, 60, 54, 96, 67, 77
+[53, 54, 60, 96, 67, 77]
+```
+
+---
+
+## 21. Pandas
+
+A pandas `DataFrame` is a labeled, 2-D table built on top of NumPy. `.iloc[]` indexes by position; columns can be computed from other columns and assigned back in.
+
+### Building a DataFrame, positional indexing, column mean, and a derived column
+
+```python
+#worksheet36
+import pandas as pd
+
+#Q1
+test_dict = {'one':[1,2,3,4],
+             'two':[9,8,7,6]}
+df = pd.DataFrame(test_dict)
+print(df)
+#a
+print(df.iloc[:,0])
+#b
+print(df.iloc[2,0])
+#c
+print(df.iloc[1,:])
+#d
+print(df.iloc[1,1])
+#e
+print(df['one'].mean())
+#f
+df['three'] = df.sum(axis=1,)
+print(df)
+```
+
+---
+
+## 22. Matplotlib
+
+`matplotlib.pyplot` plots x/y data with a few lines: label the axes, give it a title, call `.plot()` for each series, then `.show()`.
+
+### A basic line plot with labels and title
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+import seaborn as sns
+plt.xlabel('x')
+plt.ylabel('y')
+plt.title('A Graph')
+plt.plot([1,1.5,2,2.5,3],[1,1.5,2,1.5,1])
+plt.plot([1.5,2.5],[1.5,1.5])
+plt.show()
+```
+
+---
